@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F8FA"
+    tools:context=".PayActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".07" />
+
+    <ImageView
+        android:id="@+id/ic_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_back_black"
+        app:layout_constraintBottom_toTopOf="@id/guideline_top"
+        app:layout_constraintLeft_toLeftOf="@id/card_1" />
+
+    <TextView
+        app:layout_constraintLeft_toRightOf="@id/ic_back"
+        app:layout_constraintTop_toTopOf="@id/ic_back"
+        android:layout_marginStart="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        android:textColor="#1b1b1b"
+        tools:text="Revisar y enviar "
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_1"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:contentPadding="20dp"
+        app:contentPaddingBottom="20dp"
+        app:contentPaddingLeft="26dp"
+        app:contentPaddingRight="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline_bottom">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/img_avatar_2"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                app:cardCornerRadius="40dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/avatar" />
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/ic_pencil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_pencil"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/img_avatar_2" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="#1b1b1b"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/img_avatar_2"
+                app:layout_constraintTop_toBottomOf="@id/img_avatar_2"
+                tools:text="David Paz " />
+
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="#999999"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                app:layout_constraintLeft_toLeftOf="@id/tv_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_name"
+                tools:text="davidpaz@correo.com " />
+
+
+            <ImageView
+                android:id="@+id/btn_green"
+                android:layout_width="120dp"
+                android:layout_height="38dp"
+                android:src="@drawable/green_button"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_name" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@id/btn_green"
+                app:layout_constraintLeft_toLeftOf="@id/btn_green"
+                app:layout_constraintRight_toRightOf="@id/btn_green"
+                app:layout_constraintTop_toTopOf="@id/btn_green"
+                tools:text="20,00€" />
+
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="#1b1b1b"
+                android:textSize="10sp"
+                android:textStyle="normal"
+                app:layout_constraintLeft_toLeftOf="@id/tv_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_email"
+                tools:text="Mensaje" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintLeft_toLeftOf="@id/tv_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_message"
+                tools:text="Este es el dinero de la entradas…" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_2"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        app:cardCornerRadius="15dp"
+        app:contentPadding="20dp"
+        app:contentPaddingBottom="20dp"
+        app:contentPaddingLeft="26dp"
+        app:contentPaddingRight="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_tipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="#1b1b1b"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Tipo de pago " />
+
+            <ImageView
+                android:id="@+id/img_arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintRight_toLeftOf="@id/img_arrow_right"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Personal " />
+
+            <ImageView
+                android:id="@+id/dotted"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="4dp"
+                android:layerType="software"
+                android:src="@drawable/dotted"
+                app:layout_constraintLeft_toLeftOf="@id/tv_tipo"
+                app:layout_constraintRight_toRightOf="@id/img_arrow_right"
+                app:layout_constraintTop_toBottomOf="@id/tv_tipo" />
+
+            <ImageView
+                android:id="@+id/img_bitmap"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_bitmap_copy"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dotted" />
+
+            <TextView
+                android:id="@+id/tv_BBVA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="#1b1b1b"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toTopOf="@id/tv_card_number"
+                app:layout_constraintLeft_toRightOf="@id/img_bitmap"
+                app:layout_constraintTop_toTopOf="@id/img_bitmap"
+                tools:text="BBVA" />
+
+            <TextView
+                android:id="@+id/tv_card_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="#999999"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@id/img_bitmap"
+                app:layout_constraintLeft_toLeftOf="@id/tv_BBVA"
+                app:layout_constraintTop_toBottomOf="@+id/tv_BBVA"
+                tools:text="****9889" />
+
+            <ImageView
+                android:id="@+id/img_arrow_right_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_BBVA" />
+
+            <ImageView
+                android:id="@+id/dotted_2"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="4dp"
+                android:layerType="software"
+                android:src="@drawable/dotted"
+                app:layout_constraintLeft_toLeftOf="@id/img_bitmap"
+                app:layout_constraintRight_toRightOf="@id/img_arrow_right_2"
+                app:layout_constraintTop_toBottomOf="@id/img_bitmap" />
+
+            <TextView
+                android:id="@+id/tv_tarifas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="#1b1b1b"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dotted_2"
+                tools:text="Tarifas por transacción " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_tarifas"
+                tools:text="0,00€ " />
+
+            <ImageView
+                android:id="@+id/dotted_3"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="4dp"
+                android:layerType="software"
+                android:src="@drawable/dotted"
+                app:layout_constraintLeft_toLeftOf="@id/img_bitmap"
+                app:layout_constraintRight_toRightOf="@id/img_arrow_right_2"
+                app:layout_constraintTop_toBottomOf="@id/tv_tarifas" />
+
+            <TextView
+                android:id="@+id/tv_pagas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="#1b1b1b"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dotted_3"
+                tools:text="Tú pagas" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="#00d090"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@id/tv_pagas"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_pagas"
+                tools:text="20,00€ " />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/btn_send"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/blue_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_2" />
+
+    <TextView
+        android:id="@+id/tv_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="ENVIAR AHORA"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_send"
+        app:layout_constraintLeft_toLeftOf="@id/btn_send"
+        app:layout_constraintRight_toRightOf="@id/btn_send"
+        app:layout_constraintTop_toTopOf="@id/btn_send" />
+</androidx.constraintlayout.widget.ConstraintLayout>
