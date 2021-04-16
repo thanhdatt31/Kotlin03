@@ -51,7 +51,7 @@
         android:textStyle="normal"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guideline_3"
-        tools:text="Cuentas bancarias y tarjetas " />
+        android:text="Cuentas bancarias y tarjetas " />
 
     <TextView
         android:layout_width="0dp"
@@ -65,7 +65,7 @@
         app:layout_constraintLeft_toLeftOf="@id/tv_title"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_title"
-        tools:text="Mantenemos tus datos financieros protegidos para que nadie vea la información confidencial." />
+        android:text="Mantenemos tus datos financieros protegidos para que nadie vea la información confidencial." />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_top"
@@ -94,7 +94,7 @@
         android:textStyle="normal"
         app:layout_constraintLeft_toLeftOf="@id/tv_title"
         app:layout_constraintTop_toBottomOf="@id/img_card"
-        tools:text="Mis tarjetas" />
+        android:text="Mis tarjetas" />
 
 
     <androidx.cardview.widget.CardView
@@ -189,7 +189,7 @@
                 android:textStyle="normal"
                 app:layout_constraintLeft_toRightOf="@id/ic_card_1"
                 app:layout_constraintTop_toTopOf="@id/ic_card_1"
-                tools:text="Mastercard" />
+                android:text="Mastercard" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -200,7 +200,7 @@
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="@id/ic_card_1"
                 app:layout_constraintLeft_toLeftOf="@id/tv_card_name_1"
-                tools:text="****9889" />
+                android:text="****9889" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -243,7 +243,7 @@
                 app:layout_constraintBottom_toTopOf="@id/tv_card_number_2"
                 app:layout_constraintLeft_toRightOf="@id/ic_card_2"
                 app:layout_constraintTop_toTopOf="@id/ic_card_2"
-                tools:text="Visa black" />
+                android:text="Visa black" />
 
             <TextView
                 android:id="@+id/tv_card_number_2"
@@ -256,7 +256,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/ic_card_2"
                 app:layout_constraintLeft_toLeftOf="@id/tv_card_name_2"
                 app:layout_constraintTop_toBottomOf="@id/tv_card_name_2"
-                tools:text="****9889" />
+                android:text="****9889" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -305,7 +305,7 @@
                 app:layout_constraintBottom_toTopOf="@id/tv_card_number_3"
                 app:layout_constraintLeft_toRightOf="@id/ic_card_3"
                 app:layout_constraintTop_toTopOf="@id/ic_card_3"
-                tools:text="Visa black" />
+                android:text="Visa black" />
 
             <TextView
                 android:id="@+id/tv_card_number_3"
@@ -318,7 +318,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/ic_card_3"
                 app:layout_constraintLeft_toLeftOf="@id/tv_card_name_3"
                 app:layout_constraintTop_toBottomOf="@id/tv_card_name_3"
-                tools:text="****9889" />
+                android:text="****9889" />
 
             <ImageView
                 android:layout_width="wrap_content"

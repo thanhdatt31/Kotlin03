@@ -40,7 +40,7 @@
         android:textStyle="normal"
         android:textSize="16sp"
         android:textColor="#1b1b1b"
-        tools:text="Revisar y enviar "
+        android:text="Revisar y enviar "
         />
 
     <androidx.cardview.widget.CardView
@@ -96,7 +96,7 @@
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="@id/img_avatar_2"
                 app:layout_constraintTop_toBottomOf="@id/img_avatar_2"
-                tools:text="David Paz " />
+                android:text="David Paz " />
 
 
             <TextView
@@ -109,7 +109,7 @@
                 android:textStyle="normal"
                 app:layout_constraintLeft_toLeftOf="@id/tv_name"
                 app:layout_constraintTop_toBottomOf="@id/tv_name"
-                tools:text="davidpaz@correo.com " />
+                android:text="davidpaz@correo.com " />
 
 
             <ImageView
@@ -132,7 +132,7 @@
                 app:layout_constraintLeft_toLeftOf="@id/btn_green"
                 app:layout_constraintRight_toRightOf="@id/btn_green"
                 app:layout_constraintTop_toTopOf="@id/btn_green"
-                tools:text="20,00€" />
+                android:text="20,00€" />
 
             <TextView
                 android:id="@+id/tv_message"
@@ -145,7 +145,7 @@
                 android:textStyle="normal"
                 app:layout_constraintLeft_toLeftOf="@id/tv_name"
                 app:layout_constraintTop_toBottomOf="@id/tv_email"
-                tools:text="Mensaje" />
+                android:text="Mensaje" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -156,7 +156,7 @@
                 android:textStyle="normal"
                 app:layout_constraintLeft_toLeftOf="@id/tv_name"
                 app:layout_constraintTop_toBottomOf="@id/tv_message"
-                tools:text="Este es el dinero de la entradas…" />
+                android:text="Este es el dinero de la entradas…" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -190,7 +190,7 @@
                 android:textStyle="normal"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="Tipo de pago " />
+                android:text="Tipo de pago " />
 
             <ImageView
                 android:id="@+id/img_arrow_right"
@@ -209,7 +209,7 @@
                 android:textStyle="normal"
                 app:layout_constraintRight_toLeftOf="@id/img_arrow_right"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="Personal " />
+                android:text="Personal " />
 
             <ImageView
                 android:id="@+id/dotted"
@@ -244,7 +244,7 @@
                 app:layout_constraintBottom_toTopOf="@id/tv_card_number"
                 app:layout_constraintLeft_toRightOf="@id/img_bitmap"
                 app:layout_constraintTop_toTopOf="@id/img_bitmap"
-                tools:text="BBVA" />
+                android:text="BBVA" />
 
             <TextView
                 android:id="@+id/tv_card_number"
@@ -257,7 +257,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/img_bitmap"
                 app:layout_constraintLeft_toLeftOf="@id/tv_BBVA"
                 app:layout_constraintTop_toBottomOf="@+id/tv_BBVA"
-                tools:text="****9889" />
+                android:text="****9889" />
 
             <ImageView
                 android:id="@+id/img_arrow_right_2"
@@ -290,7 +290,7 @@
                 android:textStyle="normal"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/dotted_2"
-                tools:text="Tarifas por transacción " />
+                android:text="Tarifas por transacción " />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -301,7 +301,7 @@
                 android:textStyle="normal"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="@id/tv_tarifas"
-                tools:text="0,00€ " />
+                android:text="0,00€ " />
 
             <ImageView
                 android:id="@+id/dotted_3"
@@ -326,7 +326,7 @@
                 android:textStyle="normal"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/dotted_3"
-                tools:text="Tú pagas" />
+                android:text="Tú pagas" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -338,7 +338,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/tv_pagas"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="@id/tv_pagas"
-                tools:text="20,00€ " />
+                android:text="20,00€ " />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
