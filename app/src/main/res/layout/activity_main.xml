@@ -13,8 +13,8 @@
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="@id/img_logo"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/img_logo"
@@ -22,13 +22,14 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/img_avatar"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 app:cardCornerRadius="40dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.3">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -50,12 +51,14 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/img_avatar_2"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="16dp"
             app:cardCornerRadius="40dp"
             app:layout_constraintLeft_toLeftOf="@id/card"
+            app:layout_constraintWidth_percent="0.12"
+            app:layout_constraintHeight_percent="0.06"
             app:layout_constraintTop_toTopOf="@id/card">
 
             <ImageView
@@ -68,13 +71,15 @@
 
         <ImageView
             android:id="@+id/img_logo"
-            android:layout_width="140dp"
-            android:layout_height="50dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_marginTop="10dp"
             android:src="@drawable/ic_pp_fc_hl"
+            app:layout_constraintHeight_percent="0.05"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.35" />
 
         <ImageView
             android:id="@+id/ic_setting"
@@ -92,9 +97,11 @@
             android:layout_height="0dp"
             android:background="@drawable/test2"
             app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
-            app:layout_constraintLeft_toRightOf="@id/guideline_left"
-            app:layout_constraintRight_toLeftOf="@id/guideline_right"
-            app:layout_constraintTop_toTopOf="@id/guideline_top" />
+            app:layout_constraintHeight_percent="0.25"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline_top"
+            app:layout_constraintWidth_percent="0.83" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_bottom"
@@ -140,7 +147,6 @@
             android:id="@+id/tv_amount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:fontFamily="@font/montserrat_semibold"
             android:text="20,00€"
             android:textColor="@color/white"
@@ -150,12 +156,23 @@
 
         <ImageView
             android:id="@+id/oval_button"
-            android:layout_width="122dp"
-            android:layout_height="30dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_marginTop="12dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:src="@drawable/oval_button"
+            app:layout_constraintBottom_toBottomOf="@id/card"
             app:layout_constraintLeft_toLeftOf="@id/tv_amount"
+            app:layout_constraintRight_toRightOf="@id/guideline_middle"
             app:layout_constraintTop_toBottomOf="@id/tv_amount" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".5" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -233,7 +250,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_send_again"
             android:layout_width="0dp"
-            android:layout_height="85dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="4dp"
