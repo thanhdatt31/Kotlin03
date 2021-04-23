@@ -29,13 +29,14 @@ class MainActivity : AppCompatActivity(),StatusAdapter.ClickListener {
             startActivity(intentCard)
         }
         recycler_view_send_again.apply {
+            setHasFixedSize(true)
             layoutManager =
                 GridLayoutManager(context, 4)
             adapter = senderAdapter
-
         }
 
         recycler_view_status.apply {
+            setHasFixedSize(true)
             layoutManager = LinearLayoutManager(this@MainActivity)
             adapter = statusAdapter
         }
@@ -52,8 +53,7 @@ class MainActivity : AppCompatActivity(),StatusAdapter.ClickListener {
         listSender.add(
             Sender(
                 "Ruby Sanz",
-                "https://lh3.googleusercontent.com/proxy/ptLJLIzLDT65btPzHsE8LhLbehs_7fNtpX4eMBUYuMlH8TuTlSGA3uoOvnEgXC9WTVBzv3esFVzfCDJOMv04PcXvRwT3DcrchtTrx6kDa3kPJxSox0Ocy5QSi6Nv0-4CWg"
-            )
+"https://media.ex-cdn.com/EXP/media.travelmag.vn/files/thanhhuyen/2020/07/28/son-tung-mtp-lo-anh-dung-do-doi-voi-thieu-bao-tram-9-15848102443021860636400-1717.jpg"            )
         )
         listSender.add(
             Sender(

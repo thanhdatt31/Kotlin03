@@ -1,0 +1,339 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F6F8FA"
+        tools:context=".MainActivity">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/img_logo"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/img_logo"
+                app:layout_constraintTop_toTopOf="@id/img_logo">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/img_avatar"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    app:cardCornerRadius="18dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/avatar" />
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/custom_circle"
+                    app:layout_constraintLeft_toRightOf="@id/img_avatar"
+                    app:layout_constraintTop_toTopOf="@id/img_avatar" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/img_avatar_2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="25dp"
+                app:layout_constraintLeft_toLeftOf="@id/card"
+                app:layout_constraintTop_toTopOf="@id/card">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/avatar" />
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_pp_fc_hl"
+                app:layout_constraintHeight_percent="0.05"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.35" />
+
+            <ImageView
+                android:id="@+id/ic_setting"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_baseline_settings_24"
+                app:layout_constraintBottom_toBottomOf="@id/img_logo"
+                app:layout_constraintLeft_toRightOf="@id/img_logo"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/img_logo" />
+
+            <View
+                android:id="@+id/card"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/test2"
+                app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/guideline_top"
+                app:layout_constraintWidth_percent="0.5" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".35" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".07" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".93" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".1" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".5" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Nina te ha enviado"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="@id/img_avatar_2"
+                app:layout_constraintTop_toBottomOf="@id/img_avatar_2" />
+
+            <TextView
+                android:id="@+id/tv_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="20,00€"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                app:layout_constraintLeft_toLeftOf="@id/img_avatar_2"
+                app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+            <ImageView
+                android:id="@+id/oval_button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/oval_button"
+                app:layout_constraintBottom_toBottomOf="@id/card"
+                app:layout_constraintLeft_toLeftOf="@id/tv_amount"
+                app:layout_constraintRight_toRightOf="@id/guideline_middle"
+                app:layout_constraintTop_toBottomOf="@id/tv_amount" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="VER DETALLES"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/oval_button"
+                app:layout_constraintLeft_toLeftOf="@id/oval_button"
+                app:layout_constraintRight_toRightOf="@id/oval_button"
+                app:layout_constraintTop_toTopOf="@id/oval_button" />
+
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Mensaje"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintLeft_toRightOf="@id/oval_button"
+                app:layout_constraintRight_toRightOf="@id/card"
+                app:layout_constraintTop_toTopOf="@id/oval_button" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Por la cena..."
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/oval_button"
+                app:layout_constraintLeft_toRightOf="@id/oval_button"
+                app:layout_constraintRight_toRightOf="@id/card"
+                app:layout_constraintTop_toBottomOf="@id/tv_message" />
+
+            <ImageView
+                android:id="@+id/btn_oval_2"
+                android:layout_width="52dp"
+                android:layout_height="22dp"
+                android:layout_marginEnd="14dp"
+                android:background="@drawable/oval_button_2"
+                app:layout_constraintRight_toRightOf="@id/card"
+                app:layout_constraintTop_toTopOf="@id/img_avatar_2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/hoy"
+                android:textColor="#3a2424"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@id/btn_oval_2"
+                app:layout_constraintLeft_toLeftOf="@id/btn_oval_2"
+                app:layout_constraintRight_toRightOf="@id/btn_oval_2"
+                app:layout_constraintTop_toTopOf="@id/btn_oval_2" />
+
+            <TextView
+                android:id="@+id/tv_send_again"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Enviar de nuevo"
+                android:textColor="#003087"
+                app:layout_constraintLeft_toLeftOf="@id/card"
+                app:layout_constraintTop_toBottomOf="@id/card" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_send_again"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="4dp"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="@id/card"
+                app:layout_constraintRight_toRightOf="@id/card"
+                app:layout_constraintTop_toBottomOf="@id/tv_send_again" />
+
+            <TextView
+                android:id="@+id/tv_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Actividad"
+                android:textColor="#003087"
+                app:layout_constraintLeft_toLeftOf="@id/card"
+                app:layout_constraintTop_toBottomOf="@id/recycler_view_send_again" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="#025ed7"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                app:layout_constraintRight_toRightOf="@+id/recyclerview"
+                app:layout_constraintTop_toTopOf="@id/tv_activity"
+                tools:text="Ver más movimientos" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/recyclerview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="15dp"
+                app:contentPaddingBottom="10dp"
+                app:contentPaddingLeft="6dp"
+                app:contentPaddingRight="6dp"
+                app:layout_constraintLeft_toLeftOf="@id/card"
+                app:layout_constraintRight_toRightOf="@id/card"
+                app:layout_constraintTop_toBottomOf="@id/tv_activity">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:fabCradleMargin="10dp"
+            app:fabCradleRoundedCornerRadius="20dp"
+            app:fabCradleVerticalOffset="15dp">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                app:itemIconTint="@drawable/bottom_navigation_selector"
+                app:itemTextColor="@drawable/bottom_navigation_selector"
+                app:menu="@menu/menu" />
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#004A9F"
+            android:src="@drawable/ic_assignment_returned_black_18_dp_copy"
+            app:borderWidth="0dp"
+            app:fabCustomSize="64dp"
+            app:layout_anchor="@id/bottomAppBar"
+            app:tint="#fff" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</ScrollView>
