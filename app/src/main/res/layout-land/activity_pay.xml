@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#F6F8FA"
@@ -23,12 +24,6 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent=".07" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline_middle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent=".40" />
 
         <ImageView
             android:id="@+id/ic_back"
@@ -57,7 +52,6 @@
             android:layout_height="wrap_content"
             app:cardCornerRadius="15dp"
             app:contentPadding="20dp"
-            app:contentPaddingBottom="20dp"
             app:contentPaddingLeft="26dp"
             app:contentPaddingRight="15dp"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -67,7 +61,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="101dp">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/img_avatar_2"
@@ -98,14 +92,15 @@
                     android:id="@+id/tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="6dp"
                     android:fontFamily="@font/montserrat_bold"
                     android:text="David Paz "
                     android:textColor="#1b1b1b"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    app:layout_constraintLeft_toLeftOf="@id/img_avatar_2"
-                    app:layout_constraintTop_toBottomOf="@id/img_avatar_2" />
+                    app:layout_constraintLeft_toRightOf="@id/img_avatar_2"
+                    app:layout_constraintTop_toTopOf="@id/img_avatar_2" />
 
 
                 <TextView
@@ -125,12 +120,12 @@
                     android:id="@+id/btn_green"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    app:layout_constraintHeight_percent="0.22"
-                    app:layout_constraintWidth_percent="0.4"
+                    android:layout_marginTop="20dp"
                     android:src="@drawable/green_button"
+                    app:layout_constraintHeight_percent="0.22"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/tv_name"
-                    app:layout_constraintBottom_toBottomOf="@id/tv_email"/>
+                    app:layout_constraintTop_toBottomOf="@id/ic_pencil"
+                    app:layout_constraintWidth_percent="0.2" />
 
 
                 <TextView
@@ -156,7 +151,7 @@
                     android:textColor="#1b1b1b"
                     android:textSize="10sp"
                     android:textStyle="normal"
-                    app:layout_constraintLeft_toLeftOf="@id/tv_name"
+                    app:layout_constraintLeft_toLeftOf="@id/img_avatar_2"
                     app:layout_constraintTop_toBottomOf="@id/tv_email" />
 
                 <TextView
@@ -167,9 +162,8 @@
                     android:textColor="#666666"
                     android:textSize="14sp"
                     android:textStyle="normal"
-                    app:layout_constraintLeft_toRightOf="@id/tv_name"
-                    app:layout_constraintTop_toTopOf="@id/tv_message"
-                    app:layout_constraintBottom_toBottomOf="@id/tv_message"/>
+                    app:layout_constraintLeft_toLeftOf="@id/tv_message"
+                    app:layout_constraintTop_toBottomOf="@id/tv_message" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -179,15 +173,15 @@
             android:id="@+id/card_2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             app:cardCornerRadius="15dp"
             app:contentPadding="20dp"
             app:contentPaddingBottom="20dp"
             app:contentPaddingLeft="26dp"
             app:contentPaddingRight="15dp"
-            android:layout_marginTop="20dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/guideline_middle"
+            app:layout_constraintTop_toBottomOf="@id/card_1"
             app:layout_constraintWidth_percent="0.8">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -360,7 +354,7 @@
             android:id="@+id/btn_send"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/blue_button"
             app:layout_constraintHeight_percent="0.07"
